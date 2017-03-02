@@ -1,0 +1,877 @@
+@import './_color';
+
+// ********************  Reset  ***********************
+
+a {
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: $gris;
+}
+
+h1, H1, h2, H2, h3, H3 {
+  margin: 0;
+}
+
+html {
+  background-color: $marron;
+}
+
+header, footer {
+  witdh: 100%;
+  margin: 0 auto;
+}
+
+body {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+// *******************  Fonts  **********************
+//@font-face {
+//  src: url(../../fonts/glyphicons-halflings-regular.ttf);
+//  font-family: 'Glyphicons Halflings';
+//}
+
+@font-face {
+  src: url(../../../_assets/fonts/HelveticaNeueLTStd-77-BdCn.otf);
+  font-family: 'HelveticaNeueLTStd-BdCn.otf';
+}
+
+@font-face {
+  src: url(../../../_assets/fonts/HelveticaNeueLTStd-MdCn.otf);
+  font-family: 'HelveticaNeueLTStd-MdCn.otf';
+}
+
+@font-face {
+  src: url(../../../_assets/fonts/ArialMTStd-Cond.otf);
+  font-family: 'Arial MT Std Cond';
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.container, .container-fluid {
+  min-width: 1160px !important;
+}
+
+// *************** bookmarks ******************
+.c-bookmark__titles {
+  background-color: $bookmark;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  position: absolute;
+  left: 250px;
+  bottom: 25px;
+  z-index: 10;
+  background-image: url(../../../_assets/img/bookmark.png);
+  hover {
+    background-color: $jaune;
+  }
+}
+
+.c-bookmark__first {
+  background-color: $bookmark;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  position: absolute;
+  right: 70px;
+  bottom: 25px;
+  z-index: 10;
+  background-image: url(../../../_assets/img/bookmark.png);
+  a {
+    :hover {
+      background-color: $jaune;
+    }
+  }
+}
+
+.c-bookmark__third {
+  background-color: $bookmark;
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+  position: absolute;
+  right: 35px;
+  bottom: 25px;
+  z-index: 10;
+  background-image: url(../../../_assets/img/bookmark.png);
+  a {
+    :hover {
+      background-color: $jaune;
+    }
+  }
+}
+
+// *************** c-first ******************
+
+.c-first {
+  position: relative;
+  //display: inline-block;
+  text-align: left;
+  left: -28px;
+  width: 643px;
+  height: 400px;
+  z-index: 1;
+  margin: 0 0;
+  .c-first__flag {
+    position: absolute;
+    font-family: "Helvetica Neue", sans-serif;
+    font-stretch: condensed;
+    font-size: 0.6428em;
+    letter-spacing: 0.3em;
+    top: 70%;
+    left: 6%;
+    padding: 5px 10px 5px 10px;
+    background: white;
+    color: black;
+    z-index: 2;
+  }
+  .c-first__title {
+    position: absolute;
+    font-family: "Helvetica Neue", sans-serif;
+    font-stretch: condensed;
+    font-size: 2.1428em;
+    line-height: 34px;
+    top: 77.5%;
+    left: 6%;
+    color: white;
+    z-index: 2;
+    .span {
+      font-stretch: normal;
+    }
+  }
+}
+
+.c-second {
+  display: inline-block;
+}
+
+// *************** c-second ******************
+.c-second {
+  position: relative;
+  width: 326px;
+  height: 200px;
+  z-index: 1;
+  left: -12px;
+  .c-second__flag {
+    position: absolute;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 0.6428em;
+    letter-spacing: 0.3em;
+    bottom: 47%;
+    left: 7%;
+    padding: 5px 10px;
+    background: white;
+    color: black;
+    z-index: 2;
+  }
+  .c-second__title {
+    position: absolute;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 1.43em;
+    line-height: 22px;
+    bottom: 8%;
+    left: 7%;
+    color: white;
+    z-index: 2;
+  }
+}
+
+// *************** Titles Yammer ******************
+.titles {
+  border-top: 1px $gris-clair solid;
+  margin: 0;
+  padding: 0;
+}
+
+.c-titles__container {
+  height: 100px;
+  position: relative;
+}
+
+.c-titles {
+  ul {
+    border-top: 1px $gris-clair solid;
+  }
+  height: 25%;
+  list-style-type: none;
+  margin: 0 0;
+  padding-top: 16px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  border-bottom: 1px $gris-clair solid;
+  &__flag {
+    font-size: 0.6428em;
+    color: black;
+    :hover {
+      color: $vert;
+    }
+  }
+  &__title {
+    font-family: "HelveticaNeueLT Std Cn", sans-serif;
+    font-weight: 300;
+    margin-top: 1.05em;
+    font-size: 1.143em;
+    color: black;
+    line-height: 1.18em;
+
+  }
+  :hover {
+    color: $vert;
+  }
+}
+
+#embedded-feed {
+  transition: height 1.5s;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  //transform: fade_out('2');
+
+  &[data-state="hide"] {
+    display: none;
+  }
+}
+
+.c-titles__yammer {
+  width: 43px;
+  height: 43px;
+  background-image: url("../../../_assets/img/yammerToggle.png");
+  border: 0;
+  position: absolute;
+  z-index: 10000;
+  right: 0;
+}
+
+// ****************** Tendances *********************
+.c-tendance__fleche {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  margin-bottom: 35px;
+  ul {
+    display: inline-block;
+    padding-left: 10px;
+  }
+  .c-tendance__link {
+    display: inline-block;
+    list-style-type: none;
+    letter-spacing: 1px;
+    z-index: 3;
+    :hover {
+      color: $gris;
+    }
+  }
+  .c-tendance__separator {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 8px;
+    top: +1px;
+    color: $gris-clair;
+    font-size: 1.2em;
+  }
+  .c-title__actu {
+    position: absolute;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    bottom: 16px;
+    z-index: 2;
+    left: 485px;
+    width: 150px;
+  }
+}
+
+// ************** Title actualité ******************
+
+// *************** Action Box *********************
+.contain-grey {
+  margin: 0 0;
+  padding: 0 0;
+  background-color: $gris-bg;
+  z-index: 1;
+}
+
+// *************** Action Box *********************
+.action {
+  li {
+    list-style-type: none;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+
+    .c-action__yellow {
+      background-color: $jaune;
+      height: 190px;
+      margin: auto;
+      box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.1);
+      .c-action__titleJ {
+        padding-top: 50px;
+        font-family: "HelveticaNeueLT Std Med Cn", sans-serif;
+        font-weight: 400;
+        font-stretch: ultra-condensed;
+        font-size: 1.3em;
+        letter-spacing: 0.05em;
+        line-height: 1.2em;
+        color: black;
+      }
+      .c-action__subtitleJ {
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+        font-stretch: extra-condensed;
+        margin-top: 4px;
+        font-size: 0.8em;
+        letter-spacing: 0.08em;
+      }
+    }
+    .c-action__black {
+      background-color: $noir;
+      height: 190px;
+      margin: auto;
+      box-shadow: 8px 8px 8px 0 rgba(0, 0, 0, 0.1);
+      .c-action__titleB {
+        padding-top: 50px;
+        font-family: "HelveticaNeueLT Std Med Cn", sans-serif;
+        font-weight: 400;
+        font-stretch: ultra-condensed;
+        font-size: 1.3em;
+        letter-spacing: 0.05em;
+        line-height: 1.2em;
+        color: $blanc;
+      }
+
+      .c-action__subtitleB {
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+        font-stretch: extra-condensed;
+        margin-top: 4px;
+        font-size: 0.8em;
+        letter-spacing: 0.08em;
+        color: $gris;
+      }
+    }
+  }
+}
+
+.c-action__chevron {
+  background-image: url(../../../_assets/img/theChevron.png);
+  font-size: 14px;
+  width: 27px;
+  height: 27px;
+  //background-color: white;
+  color: black;
+  border-radius: 200%;
+  text-align: center;
+  margin: 14px auto;
+}
+
+// ****************** SEE MORE *********************
+.c-more__circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background-color: $vert;
+  border-radius: 100%;
+  margin-left: 10px;
+  font-size: 1.3em;
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: white;
+  top: 30px;
+  text-align: center;
+  .c-more__title {
+    font-family: "HelveticaNeueLT Std Med Cn", sans-serif;
+    font-weight: 400;
+    font-stretch: ultra-condensed;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    text-align: center;
+    span {
+      font-family: "Helvetica Neue", sans-serif;
+      //font-stretch: condensed;
+    }
+  }
+}
+
+// **************** Direct - Titre *******************
+.c-direct {
+  display: inline-block;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.7em;
+  width: 100%;
+  margin: 45px auto 40px auto;
+  text-align: center;
+  span {
+    color: $jaune;
+  }
+  img {
+    margin: 0 10px;
+  }
+}
+
+// **************** Direct - Bandeau *******************
+.c-bandeau {
+  background-image: url(../../../_assets/img/bandeau-bourse.png);
+  width: 100%;
+  height: 90px;
+  position: relative;
+  left: -5px;
+  .c-bandeau__texte {
+    text-align: center;
+    margin: 0 auto;
+    font-family: "HelveticaNeueLT Std Med Cn", sans-serif;
+    font-weight: 300;
+    font-stretch: ultra-condensed;
+    font-size: 1.7em;
+    letter-spacing: 2px;
+    padding-top: 30px;
+    span {
+      color: white;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+  }
+}
+
+// ********************  Reseaux  ***********************
+.c-reseaux {
+  font-family: "HelveticaNeueLT Std Cn", sans-serif;
+  font-stretch: condensed;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: 40px;
+  p {
+    padding-right: 25px;
+    display: inline-block;
+  }
+  a {
+    letter-spacing: 25px;
+    :hover {
+      color: $gris;
+    }
+  }
+}
+
+// ********************  Push   ***********************
+.c-push {
+  max-width: 386px;
+  width: 100%;
+  height: 274px;
+  background: white;
+  margin-bottom: 20px;
+  .c-push__visual {
+    width: 100%;
+    height: 195px;
+  }
+  .c-push__baseline {
+    width: 100%;
+    .c-push__logo {
+      width: 53px;
+      height: 53px;
+      margin: 14px 14px 14px 14px;
+      float: left;
+    }
+    .c-push__date {
+      padding-top: 14px;
+      padding-bottom: 4px;
+      font-size: 0.8em;
+      font-family: "HelveticaNeueLT Std Cn", sans-serif;
+    }
+    .c-push__title {
+      font-size: 1em;
+      font-family: "Helvetica Neue", sans-serif;
+    }
+    :hover {
+      color: $gris;
+    }
+  }
+}
+
+// *******************  Twitter   **********************
+.c-twitter {
+  max-width: 386px;
+  width: 100%;
+  height: 274px;
+  background: $noir;
+  margin-bottom: 20px;
+  .c-twitter__baseline {
+    width: 100%;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1em;
+    color: $gris;
+    .c-twitter__text {
+      font-size: 1.5em;
+      font-family: "Helvetica Neue", sans-serif;
+      color: white;
+      span {
+        color: #f6d424;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.c-twitter__logo > i {
+  color: #00aced;
+  font-size: 2.7em;
+  margin-top: 40px;
+  text-align: center;
+  margin-left: 180px;
+  margin-bottom: 15px;
+}
+
+// ****************  Access Generic *******************
+.c-arrow {
+  text-align: right;
+  font-size: 1em;
+  margin-top: 34px;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", sans-serif;
+  letter-spacing: 0.1em;
+  .c-arrow__event {
+    margin-right: 80px;
+    margin-top: 50px;
+  }
+  img {
+    margin-left: 20px;
+  }
+}
+
+// ******************  evenements  *********************
+.c-evenements {
+  display: inline-block;
+  width: 100%;
+  margin: 60px 0 20px 0;
+  text-transform: uppercase;
+  font-family: "Arial MT Std Extra Bold Cond", sans-serif;
+  font-weight: 700;
+  font-stretch: condensed;
+  font-size: 1.7em;
+  //text-align: left;
+  letter-spacing: 1px;
+  span {
+    color: $jaune;
+  }
+  img {
+    margin: 0 10px;
+  }
+}
+
+.c-event {
+  width: 100%;
+  height: 78px;
+  margin-bottom: 50px;
+  display: block;
+  .c-event__date {
+    width: 36px;
+    float: left;
+    margin: 0 14px;
+    .c-event__month {
+      max-width: 35px;
+      height: 38px;
+      font-size: 2.5em;
+      font-family: "HelveticaNeueLT Std Cn", sans-serif;
+      font-weight: bold;
+      color: $jaune;
+    }
+    .c-event__year {
+      max-width: 35px;
+      height: 38px;
+      font-size: 2.5em;
+      font-family: "HelveticaNeueLT Std Cn", sans-serif;
+      color: $gris;
+      clear: both;
+    }
+  }
+  .c-event__title {
+    position: relative;
+    display: block;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    top: +8px;
+  }
+  .c-event__texte {
+    font-size: 1.2em;
+    //text-transform: lowercase;
+    margin-top: 12px;
+    font-family: "Arial MT Std", sans-serif;
+    //font-weight: 300;
+    font-stretch: normal;
+    letter-spacing: 0.05em;
+    line-height: 1.3em;
+  }
+}
+
+.c-event__last {
+  margin-bottom: 30px;
+}
+
+.c-evenements__filet {
+  margin-left: 10px;
+}
+
+// ********************  Revue  ***********************
+.c-revue {
+  background-image: url(../../../_assets/img/encadre-jaune.png);
+  max-width: 390px;
+  text-align: center;
+  height: 410px;
+  .c-revue__title {
+    display: inline-block;
+    width: 100%;
+    margin: 60px 0 40px 0;
+    text-transform: uppercase;
+    font-family: "Arial MT Std Cond", sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+    span {
+      color: white;
+    }
+    img {
+      margin: 0 10px;
+    }
+  }
+  .c-arrow__revue {
+    text-transform: uppercase;
+    margin-right: 0;
+    margin-top: 60px;
+    letter-spacing: 0.1em;
+  }
+  img {
+    margin-left: 20px;
+  }
+}
+
+.c-revue__date {
+  text-transform: uppercase;
+  font-family: "Arial MT Condensed", sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.c-revue__text {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 2.2em;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.c-revue__subtext {
+  font-family: "HelveticaNeueLT Std Cn", sans-serif;
+  font-stretch: condensed;
+  *font-size: 2.2em;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+// ********************  Blog  ***********************
+.o-filet {
+  border-top: 1px solid $gris-bg;
+  width: 1200px;
+  height: 30px;
+  left: 0;
+}
+
+.c-blog__title {
+  background-image: url(../../../_assets/img/nos-blogs.png);
+  display: inline-block;
+  margin: 0 40px 0 60px;
+  width: 50px;
+  height: 290px;
+  background-color: $vert;
+  right: +2px;
+  position: relative;
+}
+
+.c-blog__articles {
+  display: inline-block;
+  position: absolute;
+  margin-top: 40px;
+  .c-blog__article {
+    position: relative;
+    display: inline-block;
+    max-width: 255px;
+    height: 160px;
+    .c-blog__text {
+      font-family: "Helvetica Neue", sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1em;
+      margin-top: 8px;
+    }
+    span {
+      position: absolute;
+      font-size: 1em;
+      font-family: "Arial MT Std", sans-serif;
+      font-stretch: normal;
+      letter-spacing: 0.05em;
+      top: 185px;
+    }
+  }
+}
+
+// ********************  Header  ***********************
+.c-header__message {
+  text-transform: uppercase;
+  font-family: "Arial MT Std Black", sans-serif;
+  font-stretch: condensed;
+  font-size: 1.45em;
+  line-height: 0.75em;
+  left: 0;
+  float: left;
+  span {
+    font-size: 0.65em;
+    letter-spacing: 0.35px;
+  }
+}
+
+.c-header__home {
+  text-transform: uppercase;
+  font-family: "Arial MT Std Black", sans-serif;
+  font-stretch: condensed;
+  font-size: 0.9em;
+  line-height: 0.75em;
+  margin-top: 60px;
+}
+
+.c-header__separator {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 8px;
+  //top: +1px;
+  color: black;
+  font-size: 1.2em;
+}
+
+.c-header_logos {
+  right: 0;
+  display: inline-block;
+  float: right;
+  top: -33px;
+}
+
+.c-header__marques {
+  margin-right: 40px;
+}
+
+.c-header__renault {
+
+}
+
+.c-header__connect {
+  float: right;
+  text-transform: uppercase;
+  font-family: "Arial MT Std Black", sans-serif;
+  font-stretch: condensed;
+  font-size: 0.9em;
+  line-height: -0.75em;
+}
+
+.c-header__right {
+  margin-right: 8px;
+}
+
+.c-header__left {
+  margin-left: 8px;
+}
+
+// ********************  Footer  ***********************
+.c-footer {
+  background-color: #252525;
+  margin-top: 30px;
+  left: -15px;
+  width: 1280px;
+  position: relative;
+}
+
+.c-footer__title {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin: 55px 0 55px 0;
+  text-transform: uppercase;
+  font-family: "Arial MT Std Extra Bold Cond", sans-serif;
+  font-weight: 700;
+  font-stretch: condensed;
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  color: white;
+  span {
+    color: $jaune;
+  }
+  img {
+    margin: 0 10px;
+  }
+}
+
+.c-footer__subtitle {
+  font-family: "Arial MT Std Cond", sans-serif;
+  font-weight: 700;
+  font-size: 1.15em;
+  color: $blanc;
+  text-transform: uppercase;
+  line-height: 34px;
+}
+
+.c-footer__content  {
+  font-family: "Arial MT Std Cond", sans-serif;
+  font-weight: 300;
+  font-size: 1.15em;
+  line-height: 34px;
+  a {
+    text-decoration: none;
+    color: $blanc;
+  }
+}
+.c-footer__bloc1, .c-footer__bloc2, .c-footer__bloc3, .c-footer__bloc4 {
+position: absolute;
+  top: 132px;
+}
+
+.c-footer__bloc1 {
+  margin-left: 8.25%;
+  width: 282px;
+}
+.c-footer__bloc2 {
+  margin-left: 33.75%;
+  width: 282px;
+}
+.c-footer__bloc3 {
+  margin-left: 55.25%;
+  width: 282px;
+}
+.c-footer__bloc4 {
+  margin-left: 74%;
+  width: 282px;
+}
